@@ -1,185 +1,133 @@
-# aws-devops-zero-to-hero
+# What will you learn 
 
-Complete YouTube playlist - https://www.youtube.com/playlist?list=PLdpzxOOAlwvLNOxX0RfndiYSt1Le9azze
+## Introduction to EC2:
 
-AWS zero to hero repo for devops engineers to learn AWS in 30 Days. This repo includes projects, presentations, interview questions and real time examples. Each day's class will provide real-time knowledge on AWS services, allowing you to apply what you've learned and gain practical skills in working with AWS in a DevOps context.
+What is EC2, and why is it important?
 
-## Day 1: Introduction to AWS
+```
+- Amazon Elastic Compute Cloud (Amazon EC2) is a web service that provides secure, resizable compute capacity in the cloud.
+- Access reliable, scalable infrastructure on demand. Scale capacity within minutes with SLA commitment of 99.99% availability.
+- Provide secure compute for your applications. Security is built into the foundation of Amazon EC2 with the AWS Nitro System.
+- Optimize performance and cost with flexible options like AWS Graviton-based instances, Amazon EC2 Spot instances, and AWS Savings Plans.
+```
 
-You will learn what is private and public cloud. Why companies are moving to public cloud, what are the advantages of moving to cloud.
+EC2 usecases
 
-Also, you will be introduced to the basics of AWS, including the core services and their significance in DevOps practices. Finally learn how to set up an AWS account and navigate the AWS Management Console.
+```
+Deliver secure, reliable, high-performance, and cost-effective compute infrastructure to meet demanding business needs.
+Access the on-demand infrastructure and capacity you need to run HPC applications faster and cost-effectively.
+Access environments in minutes, dynamically scale capacity as needed, and benefit from AWS’s pay-as-you-go pricing.
+Deliver the broadest choice of compute, networking (up to 400 Gbps), and storage services purpose-built to optimize price performance for ML projects
+```
 
-## Day 2: IAM (Identity and Access Management)
+EC2 Instance Types
 
-You will explore IAM, which is used for managing access to AWS resources. You'll learn how to create IAM users, groups, and roles, and how to apply permissions and security best practices to ensure proper access control.
+Recommended to follow [this](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html) page for very detailed and updated information.
 
-## Day 3: EC2 Instances
+General purpose
 
-You'll dive into EC2, which provides virtual servers in the cloud. You'll learn how to launch EC2 instances, connect to them using SSH, and understand key concepts such as instance types, security groups, and key pairs.
+```
+General Purpose instances are designed to deliver a balance of compute, memory, and network resources. They are suitable for a wide range of applications, including web servers,
+small databases, development and test environments, and more.
+```
 
-**Your First AWS Project**: Deploy a simple web application(such as jenkins) on the ec2 instance and access the application from outside AWS.
+Compute optimized
 
-## Day 4: AWS Networking (VPC)
+```
+Compute Optimized instances provide a higher ratio of compute power to memory. They excel in workloads that require high-performance processing such as batch processing, 
+scientific modeling, gaming servers, and high-performance web servers.
+```
 
-You'll explore AWS networking concepts, with a specific focus on VPC (Virtual Private Cloud). You'll learn how to create and configure VPCs, subnets, and route tables, enabling you to design and manage the network infrastructure for your applications.
+Memory optimized
 
-## Day 5: AWS Security
+```
+Memory Optimized instances are designed to handle memory-intensive workloads. They are suitable for applications that require large amounts of memory, such as in-memory databases,
+real-time big data analytics, and high-performance computing.
+```
 
-This day emphasizes security best practices in AWS. You'll learn how to implement security measures such as security groups, network ACLs (Access Control Lists), and IAM policies to ensure the confidentiality, integrity, and availability of your AWS resources.
+Storage optimized
 
-## Day 6: AWS Route 53
+```
+Storage Optimized instances are optimized for applications that require high, sequential read and write access to large datasets. 
+They are ideal for tasks like data warehousing, log processing, and distributed file systems.
+```
 
-**Project:** Configure and manage a domain name using Route 53. You'll register a domain, set up DNS records, and explore advanced features such as health checks, routing policies, and DNS-based failover.
+Accelerated computing
 
-## Day 7: Secure VPC Setup with EC2 Instances
+```
+Accelerated Computing Instances typically come with one or more types of accelerators, such as Graphics Processing Units (GPUs),
+Field Programmable Gate Arrays (FPGAs), or custom Application Specific Integrated Circuits (ASICs). 
+These accelerators offload computationally intensive tasks from the main CPU, enabling faster and more efficient processing for specific workloads.
+```
 
-**Project:**
+![image](https://github.com/iam-veeramalla/aws-devops-zero-to-hero/assets/43399466/fc8e083c-dba5-41a6-94b9-14ebef0255c1)
 
-- Design and configure a VPC:
-    Create a VPC with custom IP ranges.
-    Set up public and private subnets.
-    Configure route tables and associate subnets.
+Instance families
 
-- Implement network security:
-    Set up network access control lists (ACLs) to control inbound and outbound traffic.
-    Configure security groups for EC2 instances to allow specific ports and protocols.
+```
+    C – Compute
 
-- Provision EC2 instances:
-    Launch EC2 instances in both the public and private subnets.
-    Configure security groups for the instances to allow necessary traffic.
-    Create and assign IAM roles to the instances with appropriate permissions.
+    D – Dense storage
 
-- Networking and routing:
-    Set up an internet gateway to allow internet access for instances in the public subnet.
-    Configure NAT gateway or NAT instance to enable outbound internet access for instances in the private subnet.
-    Create appropriate route tables and associate them with the subnets.
+    F – FPGA
 
-- SSH key pair and access control:
-    Generate an SSH key pair and securely store the private key.
-    Configure the instances to allow SSH access only with the generated key pair.
-    Implement IAM policies and roles to control access and permissions to AWS resources.
+    G – GPU
 
-- Test and validate the setup:
-    SSH into the EC2 instances using the private key and verify connectivity.
-    Test network connectivity between instances in different subnets.
-    Validate security group rules and network ACL settings.
+    Hpc – High performance computing
 
-By implementing this project, you'll gain hands-on experience in setting up a secure VPC with EC2 instances, implementing networking and routing, configuring security groups and IAM roles, and ensuring proper access control. This project will provide a practical understanding of how these AWS services work together to create a secure and scalable infrastructure for your applications.
+    I – I/O
 
-## Day 8: AWS Interview Questions on EC2, IAM and VPC
+    Inf – AWS Inferentia
 
-## Day 9: Amazon S3
+    M – Most scenarios
 
-This day focuses on Amazon S3, a scalable object storage service. You'll learn how to create S3 buckets, upload and download objects, and organize data using S3 features like versioning, lifecycle policies, and access control.
+    P – GPU
 
-## Day 10: AWS CLI
+    R – Random access memory
 
-## Day 11: AWS CloudFormation
+    T – Turbo
 
-This day introduces Infrastructure as Code (IaC) using AWS CloudFormation. You'll learn how to create CloudFormation templates to automate the provisioning of resources, manage stacks, and ensure consistent infrastructure across deployments.
+    Trn – AWS Tranium
 
-**Project:** You'll work on creating a CloudFormation template that provisions a fully configured application stack, including EC2 instances, networking components, and security groups.
+    U – Ultra-high memory
 
-## Day 12: AWS CodeCommit
+    VT – Video transcoding
 
-This day focuses on AWS CodeCommit, a managed source control service. You'll learn how to set up a Git repository in CodeCommit, collaborate with team members, and manage version control of your codebase.
+    X – Extra-large memory
+```
 
-**Project:** You'll configure a CodeCommit repository for a team project, including setting up access control and collaboration workflows.
+Additional capabilities
 
-## Day 13: AWS CodePipeline
+```
+    a – AMD processors
 
-You'll dive into AWS CodePipeline, a fully managed continuous delivery service. You'll learn how to build end-to-end CI/CD pipelines by configuring source, build, and deployment stages, automating the entire software release process.
+    g – AWS Graviton processors
 
-**Project:** You'll create a CI/CD pipeline using CodePipeline for an application deployment, including source code integration, build, and automatic deployment to a target environment.
+    i – Intel processors
 
-## Day 14: AWS CodeBuild
+    d – Instance store volumes
 
-This day focuses on AWS CodeBuild, a fully managed build service. You'll learn how to configure build projects in CodeBuild, define build specifications, and perform build and testing processes.
+    n – Network and EBS optimized
 
-**Project:** You'll configure and run CodeBuild for a project, including defining build specifications and integrating with other AWS services.
+    e – Extra storage or memory
 
-## Day 15: AWS CodeDeploy
+    z – High performance
+```
 
-You'll explore AWS CodeDeploy, a service for automating application deployments to various compute environments. You'll learn how to create deployment groups, configure deployment strategies, and perform automatic rollbacks if necessary.
+## EC2 Instance Basics:
 
-**Project:** You'll implement a Blue/Green deployment strategy for a sample application using CodeDeploy, ensuring zero-downtime deployments and easy rollback options.
+Understanding the concept of virtual servers and instances.
+Key components of an EC2 instance: AMI (Amazon Machine Image), instance types, and instance states.
+Differentiating between On-Demand, Reserved, and Spot instances.
 
-## Day 16: AWS CloudWatch
+## Launching an EC2 Instance:
 
-This day focuses on monitoring AWS resources using AWS CloudWatch. You'll learn how to create alarms, set up notifications, and collect metrics to gain insights into the health and performance of your applications and infrastructure.
+- Step-by-step guide on launching an EC2 instance using the AWS Management Console.
+- Configuring instance details, such as instance type, network settings, and storage options.
+- Understanding security groups and key pairs for securing instances.
 
-**Project:** You'll set up CloudWatch alarms for critical metrics of an application, define appropriate threshold conditions, and configure notification actions.
+## Managing EC2 Instances:
 
-## Day 17: AWS Lambda
-
-This day introduces serverless computing with AWS Lambda. You'll learn how to create and deploy serverless functions, trigger them based on events, and leverage Lambda to build scalable and event-driven architectures.
-
-## Day 18: AWS CloudWatch Events and EventBridge
-
-This day focuses on AWS CloudWatch Events and EventBridge, services for event-driven architectures. You'll learn how to create event rules, configure event targets, and build serverless event-driven workflows.
-
-**Project:** You'll build a serverless event-driven workflow using CloudWatch Events and EventBridge, demonstrating the integration and automation of different AWS services based on events.
-
-## Day 19: AWS CloudFront
-
- If you've never heard of CDN or CloudFront before, don't worry, we will start from scratch and gradually build up your understanding. By the end, you'll be well-versed in these technologies.
-
-**Project:** You'll configure a s3 bucket to host a static website and learn how to serve the requests to this website through CDN that is AWS Cloud Front.
-
-## Day 20: AWS ECR (Elastic Container Registry)
-
-You'll explore AWS ECR, a fully managed container registry for storing and managing container images. You'll learn how to push and pull Docker images to and from ECR, enabling seamless integration with ECS and other container services.
-
-**Project:** You'll build a CI/CD pipeline that automatically builds, pushes, and deploys Docker images to ECR, ensuring streamlined container image management.
-
-## Day 21: AWS ECS (Elastic Container Service)
-
-This day focuses on AWS ECS, a fully managed container orchestration service. You'll learn how to run and manage containers using ECS, including creating task definitions, managing services, and scaling with auto-scaling capabilities.
-
-**Project:** You'll deploy a multi-container application using ECS, configure auto-scaling policies, and ensure high availability and efficient resource utilization.
-
-## Day 22: AWS EKS (Elastic Kubernetes Service)
-
-This day introduces AWS EKS, a fully managed Kubernetes service. You'll learn how to deploy and manage Kubernetes clusters using EKS, including launching worker nodes, configuring networking, and deploying applications using Kubernetes manifests.
-
-**Project:** You'll deploy a sample application on EKS using Kubernetes manifests, demonstrating the capabilities of running containerized applications on a managed Kubernetes service.
-
-## Day 23: AWS Systems Manager
-
-This day focuses on AWS Secrets Manager, a service for storing and managing secrets such as database credentials, API keys, and other sensitive information. You'll learn how to store, retrieve, and rotate secrets securely in your applications.
-
-**Project:** You'll configure Secrets Manager to store and manage secrets, integrate secret retrieval in an application, and implement secret rotation policies.
-
-## Day 24: Create Infrastructure using Terraform
-
-This day focusses on creating infrastructure using Terraform with real time example.
-
-**Project:** You'll create a VPC and deploy 2 applications in different availability zones. We will also create a load balancer to balance the load between the instances automatically.
-
-## Day 25: AWS CloudTrail and Config
-
-You'll explore AWS CloudTrail and AWS Config, which provide auditing and compliance capabilities. You'll learn how to track API calls using CloudTrail and ensure compliance with AWS Config rules.
-
-**Project:** You'll configure CloudTrail to log API activities and set up AWS Config rules to enforce compliance policies for your AWS resources.
-
-## Day 26: AWS Elastic Load Balancer
-
-You'll explore AWS Elastic Load Balancer, a service for distributing incoming application traffic across multiple targets. You'll learn how to configure and manage load balancers to ensure high availability, fault tolerance, and scalability.
-
-**Project:** You'll configure an Elastic Load Balancer for an application, define target groups, and observe the load balancing behavior across instances.
-
-## Day 27: 500 AWS interview questions and answers topic wise for interviews.
-
-This day focuses on learning how to migrate applications to AWS cloud. What are the most popular strategies and tools used to achieve the cloud migration.
-
-## Day 28: AWS Cloud Migration Strategies and Tools
-
-This day focuses on learning how to migrate applications to AWS cloud. What are the most popular strategies and tools used to achieve the cloud migration.
-
-## Day 29: AWS Best Practices and Job Preparation
-
-On the final day, you'll review best practices for AWS services, including security, cost optimization and performance.
-
-## Day 30: AWS Project with RDS
-
+- Starting, stopping, and terminating instances.
+- Monitoring instance performance and utilization.
+- Basic troubleshooting and accessing instances using SSH (Secure Shell).
